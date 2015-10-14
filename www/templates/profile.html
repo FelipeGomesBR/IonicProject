@@ -1,0 +1,78 @@
+<ion-view view-title="Contas">
+    <ion-content>
+        <div class="list animate-fade-slide-in-right">
+            <li class="item item-checkbox">
+                <label class="checkbox checkbox-assertive">
+                    <input type="checkbox" ng-click="calcularTotal({{dataValores[0].valor}},0)">
+                </label>
+                <div class="row">
+                    <div class="col col-66">
+                        <h2> {{ dataValores[0].nome }} </h2>
+                        <p>Venc. {{ dataValores[0].venc }}</p>
+                    </div>
+                    <div class="col">
+                        <h2>{{ dataValores[0].valor | currency : &apos;R$ &apos;}}</h2>
+                    </div>
+                </div>
+            </li>
+            <li class="item item-checkbox">
+                <label class="checkbox checkbox-dark">
+                    <input type="checkbox" ng-click="calcularTotal({{dataValores[1].valor}},1)">
+                </label>
+                <div class="row">
+                    <div class="col col-66">
+                        <h2> {{ dataValores[1].nome }} </h2>
+                        <p>Venc. {{ dataValores[1].venc }}</p>
+                    </div>
+                    <div class="col">
+                        <h2>{{ dataValores[1].valor | currency : &apos;R$ &apos;}}</h2>
+                    </div>
+                </div>
+            </li>
+            <li class="item item-checkbox">
+                <label class="checkbox checkbox-positive">
+                    <input type="checkbox" ng-click="calcularTotal({{dataValores[2].valor}},2)">
+                </label>
+                <div class="row">
+                    <div class="col col-66">
+                        <h2> {{ dataValores[2].nome }} </h2>
+                        <p>Venc. {{ dataValores[2].venc }}</p>
+                    </div>
+                    <div class="col">
+                        <h2>{{ dataValores[2].valor | currency : &apos;R$ &apos;}}</h2>
+                    </div>
+                </div>
+            </li>
+            <li class="item item-checkbox">
+                <label class="checkbox checkbox-positive">
+                    <input type="checkbox" ng-click="calcularTotal({{dataValores[3].valor}},3)">
+                </label>
+                <div class="row">
+                    <div class="col col-66">
+                        <h2> {{ dataValores[3].nome }} </h2>
+                        <p>Venc. {{ dataValores[3].venc }}</p>
+                    </div>
+                    <div class="col">
+                        <h2>{{ dataValores[3].valor | currency : &apos;R$ &apos;}}</h2>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="list animate-fade-slide-in-right">
+            <li class="item">
+                <div class="row">
+                    <div class="col">
+                        <h2>Total</h2>
+                        <h3> {{ valortotal | currency : &apos;R$ &apos;}}</h3>
+                    </div>
+                    <div class="col">
+                        <button ui-sref="app.cartoes" class="button button-outline button-small  button-assertive">
+                            Confirmar
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </div>
+
+    </ion-content>
+</ion-view>
